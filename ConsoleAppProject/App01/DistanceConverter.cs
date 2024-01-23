@@ -20,8 +20,11 @@ namespace ConsoleAppProject.App01
 
 
 
-        public void DistanceConverter.Run()
+        public void Run()
         {
+            InputMiles();
+            CalculateFeet();
+            OutputFeet();
 
         }
 
@@ -31,7 +34,9 @@ namespace ConsoleAppProject.App01
         /// </summary>
         private void InputMiles ()
         {
-
+            Console.Write("Please enter the number of miles > ");
+            string value = Console.ReadLine();
+            miles = Convert.ToDouble(value);
         }
 
         /// <summary>
