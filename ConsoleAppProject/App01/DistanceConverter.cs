@@ -86,14 +86,29 @@ namespace ConsoleAppProject.App01
             {
                 toDistance = fromDistance * FEET_IN_METRES;
             }
+
+            // Round the toDistance to 2 decimal places
+            toDistance = Math.Round(toDistance, 2);
         }
 
         private string SelectUnit(string prompt)
         {
-            string choice = DisplayChoices(prompt);
+            string choice;
+            string unit;
 
-            string unit = ExecuteChoice(choice);
-            Console.WriteLine($"\n You have chosen {unit}");
+            do
+            {
+                choice = DisplayChoices(prompt);
+                unit = ExecuteChoice(choice);
+
+                if (unit == null)
+                {
+                    Console.WriteLine("\nInvalid choice! Please select a valid option.");
+                }
+
+            } while (unit == null);
+
+            Console.WriteLine($"\nYou have chosen {unit}");
             return unit;
         }
 
