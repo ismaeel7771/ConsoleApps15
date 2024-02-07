@@ -40,10 +40,6 @@ namespace ConsoleAppProject.App04
         {
             Username = author;
             Message = text;
-            Timestamp = DateTime.Now;
-
-            likes = 0;
-            comments = new List<String>();
         }
 
         /// <summary>
@@ -51,53 +47,13 @@ namespace ConsoleAppProject.App04
         /// </summary>
         public void Like()
         {
-            likes++;
-        }
+            Console.ForegroundColor = ConsoleColor.Yellow;
+            Console.WriteLine("===================================================");
+            Console.ForegroundColor = ConsoleColor.Yellow;
+            Console.WriteLine("\t\tMassage Post Display");
+            Console.WriteLine($"\t\tMessage: {Message}");
 
-        ///<summary>
-        /// Record that a user has withdrawn his/her 'Like' vote.
-        ///</summary>
-        public void Unlike()
-        {
-            if (likes > 0)
-            {
-                likes--;
-            }
-        }
-
-        ///<summary>
-        /// Add a comment to this post.
-        /// </summary>
-        /// <param name="text">
-        /// The new comment to add.
-        /// </param>        
-        public void AddComment(String text)
-        {
-            comments.Add(text);
-        }
-
-
-        ///<summary>
-        /// Display the details of this post.
-        /// 
-        /// (Currently: Print to the text terminal. This is simulating display 
-        /// in a web browser for now.)
-        ///</summary>
-        public void Display()
-        {
-            Console.WriteLine();
-            Console.WriteLine($"    Author: {Username}");
-            Console.WriteLine($"    Message: {Message}");
-            Console.WriteLine($"    Time Elpased: {FormatElapsedTime(Timestamp)}");
-            Console.WriteLine();
-
-            if (likes > 0)
-            {
-                Console.WriteLine($"    Likes:  {likes}  people like this.");
-            }
-            else
-            {
-                Console.WriteLine();
+            base.Display();
             }
 
             if (comments.Count == 0)
