@@ -10,7 +10,7 @@ namespace ConsoleAppProject.Helpers
     /// user to select a choice from a list of choices.
     /// There are methods for outputting a main heading
     /// and a title.
-    /// <author>
+    /// <author>9
     /// Derek Peacock 2021
     /// </author>
     /// </summary>
@@ -125,7 +125,7 @@ namespace ConsoleAppProject.Helpers
 
             Console.WriteLine("\n ---------------------------------");
             Console.WriteLine($"    {heading}          ");
-            Console.WriteLine("     by Derek Peacock           ");
+            Console.WriteLine("     by Ismaeel Omer           ");
             Console.WriteLine(" ---------------------------------" +
                 "\n");
 
@@ -150,6 +150,11 @@ namespace ConsoleAppProject.Helpers
 
             Console.WriteLine("\n");
             Console.ResetColor();
+        }
+
+        internal static void DisplayErrorMessage(string v)
+        {
+            throw new NotImplementedException();
         }
     }
 }
