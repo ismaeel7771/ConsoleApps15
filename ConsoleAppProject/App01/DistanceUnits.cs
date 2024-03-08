@@ -145,7 +145,7 @@ namespace ConsoleAppProject.App01
                 Console.WriteLine("\n----------------------------------------------------------");
                 Console.WriteLine("         Distance Converter                             ");
                 Console.WriteLine("      by Ismaeel Omer                                      ");
-                Console.WriteLine("-----------------------------------------------------------\n");
+                Console.WriteLine("------------------------------------------------------------\n");
             }
         }
     }
