@@ -28,7 +28,7 @@ namespace ConsoleAppProject.App02
         }
         public void DisplayMessage()
         {
-            Console.WriteLine("\n if you are Black, Asian or other minority ethnic groups, " +
+           Console.WriteLine("\n if you are Black, Asian or other minority ethnic groups, " +
                 " you have a higher risk, Adults at 23.0 or more are at increased risk," +
                 " Adults at 27.5 or more are at high risk.");
         }
