@@ -10,7 +10,7 @@ namespace ConsoleAppProject.App04
     /// application.
     ///</summary>
     ///<author>
-    ///  Husnain Ateeq
+    ///  Ismaeel Omer
     ///  version 0.1
     ///</author> 
     public class NewsFeed

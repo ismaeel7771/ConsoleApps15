@@ -7,7 +7,7 @@ namespace ConsoleAppProject.App04
     /// The main part of the post consists of a photo and a caption. 
     ///</summary>
     /// <author>
-    /// Husnain Ateeq
+    /// Ismaeel Omer
     /// @version 0.1 
     /// </author>
     public class PhotoPost : Post
