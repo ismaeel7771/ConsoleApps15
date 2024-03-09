@@ -24,16 +24,34 @@ namespace ConsoleAppProject.Helpers
         /// </summary>
         public static int SelectChoice(string[] choices)
         {
-            // Display all the choices
+            int choiceNo;
+            int lastChoice = choices.Length;
+            bool validChoice;
 
-            DisplayChoices(choices);
+            string errorMessage =
+                $"\n INVALID CHOICE: must be 1 to {lastChoice} !";
 
-            // Get the user's choice
+            do
+            {
+                DisplayChoices(choices);
 
-            int choiceNo = (int)InputNumber("\n Please enter your choice > ", 
-                                            1, choices.Length);
+                choiceNo = (int)InputNumber(
+                    " Please enter your choice > ", 1, lastChoice);
+
+                if ((choiceNo < 1) || (choiceNo > lastChoice))
+                {
+                    validChoice = false;
+                    Console.WriteLine(errorMessage);
+                }
+                else validChoice = true;
+
+            } while (!validChoice);
+
+            Console.WriteLine();
+
             return choiceNo;
         }
+
 
         /// <summary>
         /// This displays all the available choices in a numbered
@@ -48,6 +66,7 @@ namespace ConsoleAppProject.Helpers
                 choiceNo++;
                 Console.WriteLine($"    {choiceNo}.  {choice}");
             }
+            Console.WriteLine();
         }
 
 
@@ -74,7 +93,7 @@ namespace ConsoleAppProject.Helpers
                 catch (Exception)
                 {
                     isValid = false;
-                    Console.WriteLine(" INVALID NUMBER!");
+                    Console.WriteLine(" INVALID NUMBER! Please enter a valid choice. ");
                 }
 
             } while (!isValid);

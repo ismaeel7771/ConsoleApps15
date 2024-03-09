@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ConsoleAppProject.Helpers;
+using System;
 
 namespace ConsoleAppProject.App01
 {
@@ -44,19 +45,19 @@ namespace ConsoleAppProject.App01
 
         public void ConvertDistance()
         {
-            OutputHeading();
+            ConsoleHelper.OutputHeading("Distance Converter");
 
             fromUnit = SelectUnit(" Please select the from distance unit > ");
-            toUnit = SelectUnit(" please select the to distance unit > ");
+            toUnit = SelectUnit(" Please select the to Distance unit > ");
 
-            
             Console.WriteLine($"\n Converting {fromUnit} to {toUnit}");
 
-           fromDistance =  InputDistance($" Please enter the number of {fromUnit} > ");
+            fromDistance = ConsoleHelper.InputNumber($" Please enter the number of {fromUnit} > ");
 
             CalculateDistance();
 
             OutputDistance();
+
 
         }
 
