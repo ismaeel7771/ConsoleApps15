@@ -16,6 +16,13 @@ namespace ConsoleAppProject.Helpers
     /// </summary>
     public static class ConsoleHelper
     {
+        internal static App02.BMI BMI
+        {
+            get => default;
+            set
+            {
+            }
+        }
 
         /// <summary>
         /// This method displays a list of numbered choices to the

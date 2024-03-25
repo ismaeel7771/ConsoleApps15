@@ -21,6 +21,15 @@ namespace ConsoleAppProject
         private static BMI calculator = new BMI();
         private static StudentGrades grader = new StudentGrades();
         private static NewsApp app = new NewsApp();
+
+        internal static BMI BMI
+        {
+            get => default;
+            set
+            {
+            }
+        }
+
         public static void Main(string[] args)
         {
             Console.ForegroundColor = ConsoleColor.Yellow;
