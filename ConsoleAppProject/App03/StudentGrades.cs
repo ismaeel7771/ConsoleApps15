@@ -32,6 +32,14 @@ namespace ConsoleAppProject.App03
 
         public int Choice { get; set; }
 
+        public Grades Grades
+        {
+            get => default;
+            set
+            {
+            }
+        }
+
 
 
         ///creates a grade profile of length for all the grades

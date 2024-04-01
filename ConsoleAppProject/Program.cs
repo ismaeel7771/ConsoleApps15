@@ -30,6 +30,22 @@ namespace ConsoleAppProject
             }
         }
 
+        public static App01.ConsoleAppProject.App01.DistanceConverter DistanceConverter
+        {
+            get => default;
+            set
+            {
+            }
+        }
+
+        public static StudentGrades StudentGrades
+        {
+            get => default;
+            set
+            {
+            }
+        }
+
         public static void Main(string[] args)
         {
             Console.ForegroundColor = ConsoleColor.Yellow;
