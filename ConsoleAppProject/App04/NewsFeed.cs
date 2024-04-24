@@ -15,7 +15,7 @@ namespace ConsoleAppProject.App04
     ///</author> 
     public class NewsFeed
     {
-        public const string AUTHOR = "Husnain";
+        public const string AUTHOR = "Ismaeel";
 
 
         private readonly List<Post> posts;
@@ -25,11 +25,11 @@ namespace ConsoleAppProject.App04
         {
             posts = new List<Post>();
 
-            MessagePost post = new MessagePost(AUTHOR, "I Like Visual Studio 2021");
+            MessagePost post = new MessagePost(AUTHOR, "I Like cars");
             AddMessagePost(post);
             post.AddComment("hello");
 
-            PhotoPost photoPost = new PhotoPost(AUTHOR, "Photo1.jpg", "Visual Studio 2021");
+            PhotoPost photoPost = new PhotoPost(AUTHOR, "image.png", "Visual Studio 2021");
             AddPhotoPost(photoPost);
 
 
@@ -43,6 +43,13 @@ namespace ConsoleAppProject.App04
             }
         }
 
+        public Post Post1
+        {
+            get => default;
+            set
+            {
+            }
+        }
 
         public void AddMessagePost(MessagePost message)
         {

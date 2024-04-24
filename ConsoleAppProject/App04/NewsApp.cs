@@ -24,6 +24,14 @@ namespace ConsoleAppProject.App04
             }
         }
 
+        public NewsFeed NewsFeed1
+        {
+            get => default;
+            set
+            {
+            }
+        }
+
         //Display Menu//
         public void DisplayMenu()
         {

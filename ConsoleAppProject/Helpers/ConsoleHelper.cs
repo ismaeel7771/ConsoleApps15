@@ -40,6 +40,22 @@ namespace ConsoleAppProject.Helpers
             }
         }
 
+        public static App04.NewsApp NewsApp
+        {
+            get => default;
+            set
+            {
+            }
+        }
+
+        public static App04.NewsFeed NewsFeed
+        {
+            get => default;
+            set
+            {
+            }
+        }
+
         /// <summary>
         /// This method displays a list of numbered choices to the
         /// user, they can then select a choice and and the choice 
